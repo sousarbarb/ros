@@ -18,4 +18,6 @@ distrobox create                                \
   --nvidia --yes
 
 distrobox enter ros2-dev-<humble|jazzy|lyrical>
+
+sudo chown -R $USER:$USER /home/ros2lyrical
 ```
