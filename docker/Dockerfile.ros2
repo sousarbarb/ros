@@ -72,7 +72,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   ros-${ROS_DISTRO}-rosbag2-storage-mcap      \
   ros-${ROS_DISTRO}-rqt-bag                   \
   # tf & diagnostics tooling
+  ros-${ROS_DISTRO}-rqt                       \
+  ros-${ROS_DISTRO}-rqt-common-plugins        \
   ros-${ROS_DISTRO}-rqt-tf-tree               \
   ros-${ROS_DISTRO}-tf2-tools                 \
   ros-${ROS_DISTRO}-diagnostic-aggregator     \
   && rm -rf /var/lib/apt/lists/*
+
+# Development directories setup
+RUN mkdir -p /home/ros2${ROS_DISTRO}/dev/ && \
+  mkdir -p /home/ros2${ROS_DISTRO}/ros_ws/src/
