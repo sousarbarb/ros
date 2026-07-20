@@ -1,0 +1,9 @@
+<launch>
+
+  <node pkg="simple_publisher_subscriber" exec="pub_cpp"
+    name="publisher" output="screen" />
+
+  <node pkg="simple_publisher_subscriber" exec="sub_cpp"
+    name="subscriber" output="screen" />
+
+</launch>
